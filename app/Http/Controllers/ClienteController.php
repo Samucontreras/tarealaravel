@@ -281,29 +281,30 @@ class ClienteController extends Controller
     }
 
     /**
-     * Eliminar la información de un cliente
-     * @OA\Delete (
-     *     path="/api/clientes/{id}",
-     *     tags={"Cliente"},
-     *     @OA\Parameter(
-     *         in="path",
-     *         name="id",
-     *         required=true,
-     *         @OA\Schema(type="string")
-     *     ),
-     *     @OA\Response(
-     *         response=204,
-     *         description="NO CONTENT"
-     *     ),
-     *      @OA\Response(
-     *          response=404,
-     *          description="NOT FOUND",
-     *          @OA\JsonContent(
-     *              @OA\Property(property="message", type="string", example="No se pudo realizar correctamente la operación"),
-     *          )
-     *      )
-     * )
-     */
+ * Eliminar la información de un cliente
+ * @OA\Delete (
+ *     path="/api/clientes/{id}",
+ *     tags={"Cliente"},
+ *     @OA\Parameter(
+ *         in="path",
+ *         name="id",
+ *         required=true,
+ *         @OA\Schema(type="string")
+ *     ),
+ *     @OA\Response(
+ *         response=204,
+ *         description="Operación exitosa. No hay contenido (NO CONTENT)."
+ *     ),
+ *     @OA\Response(
+ *         response=404,
+ *         description="El cliente no fue encontrado (NOT FOUND).",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="message", type="string", example="No se encontró el cliente con el ID especificado."),
+ *         )
+ *     )
+ * )
+ */
+
 
     public function destroy($id)
     {

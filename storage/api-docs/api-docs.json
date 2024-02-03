@@ -375,17 +375,17 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "NO CONTENT"
+                        "description": "Operación exitosa. No hay contenido (NO CONTENT)."
                     },
                     "404": {
-                        "description": "NOT FOUND",
+                        "description": "El cliente no fue encontrado (NOT FOUND).",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "properties": {
                                         "message": {
                                             "type": "string",
-                                            "example": "No se pudo realizar correctamente la operación"
+                                            "example": "No se encontró el cliente con el ID especificado."
                                         }
                                     },
                                     "type": "object"
